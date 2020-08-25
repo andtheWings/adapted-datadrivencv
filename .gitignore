@@ -8,3 +8,7 @@ cv.html
 datadrivencv.Rproj
 
 data/me.jpg
+
+cv.pdf
+
+*.pdf
