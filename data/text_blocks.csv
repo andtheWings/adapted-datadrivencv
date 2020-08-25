@@ -1,0 +1,6 @@
+Id used for finding text block,Contents of text block. Supports markdown formatting.
+loc,text
+intro,Thank you for the opportunity to apply to your program. I look forward to sharing my passion for preventive medicine!
+coding_courses,"**Coding Courses Completed:**<br><br>
+- Hello<br>
+- It’s me"

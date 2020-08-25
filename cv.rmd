@@ -1,0 +1,427 @@
+---
+title: "Daniel P Riggins, MD's CV"
+author: Daniel P Riggins, MD
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: FALSE
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(magrittr) # For the pipe
+library(here) # Constructs paths to your project's files.
+library(glue) # Glue offers interpreted string literals that are small, fast, and dependency-free. 
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = glue("{here(\"data\")}/"),  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+datadrivencv::build_network_logo(CV$entries_data)
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_contact_info()
+```
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+```{r}
+if(params$pdf_mode){
+  cat("View this [CV online](https://danielriggins.com/cv)")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/andtheWings/cv/raw/master/riggins-cv.pdf)")
+}
+```
+
+Made with the R packages [\{pagedown\}](https://github.com/rstudio/pagedown), [\{datadrivencv\}](http://nickstrayer.me/datadrivencv/), and [\{rorcid\}](https://docs.ropensci.org/rorcid/)
+
+Source code available on [github](github.com/andtheWings/datadrivencv)
+
+Last updated on `r Sys.Date()`
+
+
+Main
+================================================================================
+
+Daniel P Riggins, MD {#title}
+---------------------------------------
+
+Thank you for the opportunity to apply to Regenstrief Institute's Public & Population Health Informatics Fellowship! While making this CV, I used a few R packages under the hood to demonstrate my data manipulation abilities. Basically, I pulled records from the [Orcid](https://orcid.org/) API, munged it into useable form, and fed it into a templating engine to generate the document you see here. Although this took a week's worth of after-hours time investment, it will be much easier to maintain my CV moving forward. Added benefits include staying consistent with my Orcid profile and being able to share either HTML or PDF format depending on the context. Please see this Github repo if you're curious about the underlying code. 
+
+Education {data-icon=graduation-cap}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+Honors and Awards {data-icon=award}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('awards')
+```
+
+Research Projects {data-icon=search}
+--------------------------------------------------------------------------------
+
+### Road Injury Safety in Indianapolis
+
+Indiana University School of Medicine
+
+Indianapolis, IN
+
+Present - 2018
+
+- Mentors: [Randy Grout](https://www.regenstrief.org/person/randall-grout/), [Sarah Wiehe](https://medicine.iu.edu/faculty/16722/wiehe-sarah), and [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey)
+- Role: Exploratory analyses
+- Output: [Blog posts](https://hallriggins.org/2020/07/04/prevention-on-my-mind/)
+
+### Adolescent Enuresis
+
+Albert Einstein College of Medicine
+
+Bronx, NY
+
+2018 - 2017
+
+- Mentor: [Jessica Rieder, M.D., M.S.](https://www.einstein.yu.edu/faculty/1063/jessica-rieder/), Associate Professor in Department of Pediatrics, who directs a weight management clinic for teens
+- Role: Coordinated recruiting and performed data analysis for a survey investigating the rate of enuresis in the Montefiore teen population and related factors
+- Output: Authorship on [poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx)
+
+### Incarceration and Buprenorphine Therapy
+
+Albert Einstein College of Medicine
+
+Bronx, NY
+
+2016 - 2015
+
+- Mentor: [Aaron D. Fox, M.D.](https://www.einstein.yu.edu/faculty/11501/aaron-fox/), Associate Professor in Department of General Internal Medicine, who directs a primary care clinic for people transitioning out of incarceration
+- Role: Took lead on post-hoc analysis of a cohort of patients receiving integrated treatment for HIV and opioid use disorder. Our study asked how recent incarceration affects outcomes for buprenorphine replacement therapy
+- Outputs: [Two](http://danielriggins.com/cv/prop/bupe_riggins_150818.pptx) [presentations](http://danielriggins.com/cv/prop/correctional_health_conference_slides.pptx), first authorship on [journal publication](http://www.tandfonline.com/doi/full/10.1080/08897077.2016.1220443), and research award from my medical school
+
+### *Staphylococcal* Genetics
+
+Food and Drug Administration, Center for Biologics Evaluation and Research
+
+Bethesda, MD
+
+2014 - 2012
+
+- Mentors: Roger D. Plaut, Ph.D. and [Scott Stibitz, Ph.D.](https://www.fda.gov/vaccines-blood-biologics/biologics-research-projects/bacterial-vaccine-safety-biomarkers-virulence-and-attenuation-bordetella-pertussis-whooping-cough), who directs a lab studying disease-causing bacteria for new vaccines and novel therapeutic approaches
+- Role: As in [employment section](danielriggins.com/cv#employment)
+- Outputs: Authorship on [two](http://www.cell.com/cell-host-microbe/fulltext/S1931-3128(17)30441-9) [papers](https://mbio.asm.org/content/10/1/e02491-18)
+
+### Acid Survival of *E. coli*
+
+Kenyon College
+
+Gambier, OH
+
+2013 - 2008
+
+- Mentor: [Joan L. Slonczewski, Ph.D.](https://www.kenyon.edu/directories/campus-directory/biography/joan-slonczewski/), Professor of Biology, who directs a lab researching bacterial genetics and physiology
+- Role: Took lead on a project investigating how anaerobic conditions affect the acid survival response in E. coli
+- Outputs: [Honors thesis](https://digital.kenyon.edu/honorstheses/76/), [poster presentation](http://danielriggins.com/cv/prop/Riggins_ASM_Poster_3.pptx), [two](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0010132) [papers](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0056796) with first authorship on the second one, and research award from my undergraduate school
+
+Journal Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('pubs')
+```
+
+Presentations {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+### Obesity in Urban Youth: Connection to Enuresis ([poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx))
+
+Pediatric Academic Societies Meeting
+
+Baltimore, MD
+
+2019
+
+- Gross, M., Riggins, D.P., Sims, C., Foreman, O., Rieder, J.
+
+### The relationship between incarceration and retention in opioid maintenance treatment ([slides](http://danielriggins.com/cv/prop/correctional_health_conference_slides.pptx))
+
+9th Academic and Health Policy Conference on Correctional Health
+
+Baltimore, MD
+
+2016
+
+- Riggins, D.P., Fox, A.D.
+
+### The relationship between incarceration and opioid addiction treatment ([slides](http://danielriggins.com/cv/prop/bupe_riggins_150818.pptx))
+
+New York Academy of Medicine's Medical Student Forum
+
+New York City, NY
+
+2015
+
+- Riggins, D.P., Fox, A.D.
+
+### pH Regulation Differs Under Low Oxygen Conditions in E. Coli ([poster](http://danielriggins.com/cv/prop/Riggins_ASM_Poster_3.pptx))
+
+112th General Meeting of the American Society for Microbiology
+
+San Francisco, CA
+
+2012
+
+- Riggins, D.P., Martinez, K, Slonczewski, J.L.
+
+### The Effects of Anoxic Conditions on the Extreme-Acid Survival of Escherichia coli (slides)
+
+Kenyon College Biology Honors Student Presentations
+
+Gambier, OH
+
+2012
+
+- Riggins, Slonczewski, J.L.
+
+
+Employment {data-icon=briefcase #employment}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('employment')
+```
+
+Extracurriculars {data-icon=hands-helping}
+--------------------------------------------------------------------------------
+
+### Wellness Chair
+
+IUSM Pediatrics Resident Council
+
+Indianapolis, IN
+
+2020 - 2018
+
+- Coordinated improvements to resident workrooms like couches, lamps, mini-fridge, etc	
+- Advocated with hospital admin for a change in location of the resident workroom to a space with windows	
+- Coordinated wellness sessions during noon conference such as time with our dogs on the front lawn and a curriculum on spiritual care in medicine
+
+### Board Member
+
+Einstein Social Medicine Lecture Series
+
+Bronx, NY
+
+2016 - 2014
+
+- Coordinated lectures delivered by invited speakers on the following topics: healthcare for refugees, ethics of lethal injection, correctional health, and social implications of antimicrobial resistance
+
+### Clinical Volunteer
+
+Einstein Community Health Outreach Clinic
+
+Bronx, NY
+
+2018 - 2014
+
+- Completed 15 sessions at Einstein's student-run free clinic for uninsured/undocumented patients
+- During clinical years (3-4), provided primary care encounters for patients, ran back-of-house operations like laboratory/consult follow-up, and coordinated clinical flow
+- During pre-clinical years (1-2), performed chart review for information on quality measures as well as initial patient intake and triage	
+
+### Board Member
+
+Einstein NICU Cuddling Club
+
+Bronx, NY
+
+2018 - 2014
+
+- Acted as board member for 2015-2016 academic year, coordinating training and scheduling for program volunteers
+- Personally provided 16 hours of supportive human touch for neonates in the Montefiore neonatal intensive care unit
+
+### Board Member
+
+Health Education Outreach Program
+
+Bethesda, MD
+
+2014 - 2012
+
+- Personally taught over 10 health lessons at homeless shelters in the Maryland suburbs of Washington D.C.
+- As board member, helped with recruiting, training, and development of [organization web site](https://heopdmv.wordpress.com/about/)	
+- As head teacher, coordinated scheduling, [wrote/edited content](http://danielriggins.com/cv/img/menshealth.pdf), and assigned responsibilities for a group of 5 teachers
+
+### Educator and Gardener
+
+Bronx, Obesity, Diabetes, and You (BODY)
+
+Bronx, NY
+
+2015 - 2012
+
+- Taught local elementary students how to plant seeds and transplant them into BODY-run community garden
+- Maintained the garden over summer months. Harvested produce and shared it with local community members
+
+### Patient Ambassador
+
+Clinical Center at the National Institutes of Health
+
+Bethesda, MD
+
+2014 - 2012
+
+- In the radiology department, I transported people to imaging and back	
+- In the surgery department, I stocked operating rooms with supplies and transported patients to/from their procedures	
+- See a [brief feature](https://www.cc.nih.gov/about/news/newsletter/2014/apr2014/newsletter.html#story1) about volunteers including myself in the Clinical Center’s newsletter
+
+### Dog Handler
+
+People and Animals Cardio Klub (PACK) of the Humane Rescue Alliance
+
+Washington, DC
+
+2014 - 2012
+
+- Picked up dogs from area shelters every Saturday morning and drove them to a meeting spot in Rock Creek National Park for a three-mile run	
+- Sustained exercise helped the dogs with general health as well as temperament during subsequent adoption events	
+
+
+Professional Societies {data-icon=stethoscope}
+--------------------------------------------------------------------------------
+
+### American Academy of Pediatrics
+
+With sub-memberships in:
+
+N/A
+
+2018 - Present
+
+- Indiana Chapter of the AAP
+- Council on Clinical Information Technology
+
+Coding Courses {data-icon=laptop}
+---------------------------------------------------------------------------------
+
+### Coursera:
+
+Python for Everybody Specialization:
+
+N/A
+
+N/A
+
+- Programming for Everybody
+- Python Data Structures
+- Using Python to Access Web Data
+- Using Databases with Python
+
+### DataCamp:
+
+R:
+
+N/A
+
+N/A
+  
+- Introduction to R
+- Intermediate R
+- Introduction to the Tidyverse
+- Data Manipulation with dplyr
+- Interactive Maps with leaflet in R
+
+**Python:**
+
+- Introduction to Python
+- Intermediate Python
+- Streamlined Data Ingestion with pandas
+
+**SQL:**
+
+  - Introduction to SQL
+
+Personal Interests {data-icon=bicycle}
+---------------------------------------------------------------------------------
+
+### Bicycling
+
+For my commute, recreationally, and as an avenue for advocacy
+
+N/A
+
+N/A
+
+### Citizen Science
+
+Like the iNaturalist project 
+
+N/A
+
+N/A
+
+### Gardening
+
+I have a rain garden that serves as pollinator habitat 
+
+N/A
+
+N/A
+
+### Mapping
+
+Especially with the free OpenStreetMap project
+
+N/A
+
+N/A
+
+### Open Source
+
+Especially projects in the R language
+
+N/A
+
+N/A
+
+
