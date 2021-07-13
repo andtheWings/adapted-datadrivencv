@@ -3,6 +3,12 @@ library(rorcid)
 library(here)
 library(glue)
 
+# Initiate template
+
+headers <- read_csv(here("data", "entries_template.csv"))
+
+write_csv(headers, here("data", "entries.csv"))
+
 # Rorchid Import
 
 education <- bind_rows(
