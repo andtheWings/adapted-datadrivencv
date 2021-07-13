@@ -186,6 +186,16 @@ CV %<>% print_section('pubs')
 Presentations {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
+### Indiana Ave Community Survey ([slides](https://docs.google.com/presentation/d/1FNQX2FLx0By-fFqEsdiiuGdxNx1620Px5jWqWwBzifc/edit?usp=sharing))
+
+Senior Presentation for Pediatrics Residency at Indiana University School of Medicine
+
+Indianapolis, IN
+
+2021
+
+- Riggins, D.P.
+
 ### Obesity in Urban Youth: Connection to Enuresis ([poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx))
 
 Pediatric Academic Societies Meeting
