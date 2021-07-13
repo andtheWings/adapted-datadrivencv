@@ -104,6 +104,18 @@ CV %<>% print_section('awards')
 Research Projects {data-icon=search}
 --------------------------------------------------------------------------------
 
+### Community Survey of the Indiana Avenue Cultural District
+
+Indiana University School of Medicine
+
+Indianapolis, IN
+
+Present - 2020
+
+- Mentors: [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey)
+- Role: Primary survey developer
+- Output: [IRB Protocol](http://danielriggins.com/IRB_for_Indy_Housing_Interviews/) and the [survey itself](https://iu.co1.qualtrics.com/jfe/form/SV_0cV3fmUkfeitwdE)
+
 ### Road Injury Safety in Indianapolis
 
 Indiana University School of Medicine
@@ -112,7 +124,7 @@ Indianapolis, IN
 
 Present - 2018
 
-- Mentors: [Randy Grout](https://www.regenstrief.org/person/randall-grout/), [Sarah Wiehe](https://medicine.iu.edu/faculty/16722/wiehe-sarah), and [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey)
+- Mentors: [Randy Grout](https://www.regenstrief.org/person/randall-grout/), [Sarah Wiehe](https://medicine.iu.edu/faculty/16722/wiehe-sarah)
 - Role: Exploratory analyses
 - Output: [Blog posts](https://hallriggins.org/2020/07/04/prevention-on-my-mind/)
 
