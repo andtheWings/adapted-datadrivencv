@@ -85,8 +85,6 @@ Main
 Daniel P Riggins, MD {#title}
 ---------------------------------------
 
-Thank you for the opportunity to apply to Regenstrief Institute's Public & Population Health Informatics Fellowship! While making this CV, I used a few R packages under the hood to demonstrate my data manipulation abilities. Basically, I pulled records from the [Orcid](https://orcid.org/) API, munged it into useable form, and fed it into a templating engine to generate the document you see here. Although this took a week's worth of after-hours time investment, it will be much easier to maintain my CV moving forward. Added benefits include staying consistent with my Orcid profile and being able to share either HTML or PDF format depending on the context. Please see this [Github repo](https://github.com/andtheWings/adapted-datadrivencv) if you're curious about the underlying code. 
-
 Education {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
 
