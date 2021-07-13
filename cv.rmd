@@ -257,6 +257,16 @@ CV %<>% print_section('employment')
 Extracurriculars {data-icon=hands-helping}
 --------------------------------------------------------------------------------
 
+### Volunteer
+
+[VOICES](http://voicescorp.org/)
+
+Indianapolis, IN
+
+Present - 2020
+
+- Mentored Youth Leadership Fellows on an advocacy Project regarding housing/homelessness
+
 ### Wellness Chair
 
 IUSM Pediatrics Resident Council
