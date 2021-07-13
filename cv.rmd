@@ -112,7 +112,7 @@ Indianapolis, IN
 
 Present - 2020
 
-- Mentors: [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey)
+- Mentor: [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey), Assistant Professor in Department of Pediatrics
 - Role: Primary survey developer
 - Output: [IRB Protocol](http://danielriggins.com/IRB_for_Indy_Housing_Interviews/) and the [survey itself](https://iu.co1.qualtrics.com/jfe/form/SV_0cV3fmUkfeitwdE)
 
