@@ -92,6 +92,13 @@ Training {data-icon=graduation-cap}
 CV %<>% print_section('education')
 ```
 
+Other Employment {data-icon=briefcase #employment}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('employment')
+```
+
 Honors and Awards {data-icon=award}
 --------------------------------------------------------------------------------
 
@@ -280,13 +287,6 @@ Gambier, OH
 
 - Riggins, Slonczewski, J.L.
 
-
-Employment {data-icon=briefcase #employment}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('employment')
-```
 
 Extracurriculars {data-icon=hands-helping}
 --------------------------------------------------------------------------------
