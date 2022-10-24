@@ -85,7 +85,7 @@ Main
 Daniel P. Hall Riggins, MD {#title}
 ---------------------------------------
 
-Education {data-icon=graduation-cap}
+Training {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
 
 ```{r}
