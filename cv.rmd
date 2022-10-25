@@ -4,7 +4,7 @@ author: Daniel P. Hall Riggins, MD
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
-    value: FALSE
+    value: false
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
@@ -26,8 +26,11 @@ source("cv_printing_functions.r")
 CV <- create_CV_object(
   data_location = glue("{here(\"data\")}/"),  
   pdf_mode = params$pdf_mode
-)
+) 
 
+CV$entries_data <-
+    CV$entries_data |> 
+    dplyr::filter(as.logical(medically_relevant))
 ```
 
 
@@ -65,11 +68,11 @@ Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this [CV online](https://danielriggins.com/cv)")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/andtheWings/andtheWings.github.io/master/cv/cv.pdf)")
-}
+# if(params$pdf_mode){
+#   cat("View this [CV online](https://danielriggins.com/cv)")
+# } else {
+#   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/andtheWings/andtheWings.github.io/master/cv/cv.pdf)")
+# }
 ```
 
 Made with the R packages [\{pagedown\}](https://github.com/rstudio/pagedown) and [\{datadrivencv\}](http://nickstrayer.me/datadrivencv/)
@@ -106,116 +109,12 @@ Honors and Awards {data-icon=award}
 CV %<>% print_section('awards')
 ```
 
-Project Work {data-icon=search}
+Selected Projects {data-icon=search}
 --------------------------------------------------------------------------------
 
-### Cook County Recovery Home Coordinated Capacity Project
-
-Cook County Health
-
-Chicago, IL
-
-Present - 2021
-
-- Mentor: [Juleigh Nowinski-Konchak](https://cookcountyhealth.org/physicians/juleigh-m-nowinski-konchak-md/)
-- Description: Acting as program manager for an intervention using navigators and capacity management software to improve the experience for clients seeking placement at substance use recovery homes
-- Output: None (pilot of project still in progress)
-
-### Evaluation of the Oak Park Medical Respite Center
-
-Cook County Health
-
-Oak Park, IL
-
-2022 - 2021
-
-- Mentor: [Keiki Hinami](https://cookcountyhealth.org/physicians/keiki-hinami-md-2/)
-- Description: Generating descriptive statistics and an analysis of healthcare utilization for patients at CCH's medical respite center serving people experiencing homelessness
-- Output: White paper (manuscript in progress)
-
-### Project CHILD
-
-Cook County Health
-
-Chicago, IL
-
-Present - 2021
-
-- Mentor: [Bill Trick](https://cookcountyhealth.org/physicians/william-trick-md/)
-- Description: Developing models of the geographic distribution of Sudden Infant Death Syndrome-related deaths in Cook County, IL
-- Output: Oral presentations to Cook County Health and Chicago Dept of Public Health
-
-### Community Survey of the Indiana Avenue Cultural District
-
-Indiana University School of Medicine
-
-Indianapolis, IN
-
-2021 - 2020
-
-- Mentor: [Tracey Wilkinson](https://medicine.iu.edu/faculty/23603/wilkinson-tracey)
-- Description: Developed a survey that investigated local residents' vision for the central historic neighborhood of the Black community in Indianapolis
-- Output: [IRB Protocol](http://danielriggins.com/IRB_for_Indy_Housing_Interviews/) and the [survey itself](https://iu.co1.qualtrics.com/jfe/form/SV_0cV3fmUkfeitwdE)
-
-### Road Injury Safety in Indianapolis
-
-Indiana University School of Medicine
-
-Indianapolis, IN
-
-2020 - 2018
-
-- Mentors: [Randy Grout](https://www.regenstrief.org/person/randall-grout/), [Sarah Wiehe](https://medicine.iu.edu/faculty/16722/wiehe-sarah)
-- Description: Performed [geospatial visualization](http://danielriggins.com/plotting_crashes.html) and [hot-spot analysis](http://danielriggins.com/KDEplus_Notebook) regarding pedestrian crashes around the Indianapolis Metropolitan area
-- Output: Open access reports as above
-
-### Adolescent Enuresis
-
-Albert Einstein College of Medicine
-
-Bronx, NY
-
-2018 - 2017
-
-- Mentor: [Jessica Rieder, M.D., M.S.](https://www.einstein.yu.edu/faculty/1063/jessica-rieder/)
-- Description: Coordinated recruiting and performed data analysis for a survey investigating the rate of enuresis in the Montefiore teen population and related factors
-- Output: Research [poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx)
-
-### Incarceration and Buprenorphine Therapy
-
-Albert Einstein College of Medicine
-
-Bronx, NY
-
-2016 - 2015
-
-- Mentor: [Aaron D. Fox, M.D.](https://www.einstein.yu.edu/faculty/11501/aaron-fox/)
-- Description: Directed a post-hoc analysis of a cohort of patients receiving integrated treatment for HIV and opioid use disorder; the study asked how recent incarceration affected outcomes for buprenorphine replacement therapy
-- Outputs: [Two](http://danielriggins.com/cv/prop/bupe_riggins_150818.pptx) [presentations](http://danielriggins.com/cv/prop/correctional_health_conference_slides.pptx), first authorship on [journal publication](http://www.tandfonline.com/doi/full/10.1080/08897077.2016.1220443), and research award from my medical school
-
-### *Staphylococcal* Genetics
-
-Food and Drug Administration, Center for Biologics Evaluation and Research
-
-Bethesda, MD
-
-2014 - 2012
-
-- Mentors: Roger D. Plaut, Ph.D. and [Scott Stibitz, Ph.D.](https://www.fda.gov/vaccines-blood-biologics/biologics-research-projects/bacterial-vaccine-safety-biomarkers-virulence-and-attenuation-bordetella-pertussis-whooping-cough)
-- Description: As in [employment section](danielriggins.com/cv#employment)
-- Outputs: Authorship on [two](http://www.cell.com/cell-host-microbe/fulltext/S1931-3128(17)30441-9) [papers](https://mbio.asm.org/content/10/1/e02491-18)
-
-### Acid Survival of *E. coli*
-
-Kenyon College
-
-Gambier, OH
-
-2013 - 2008
-
-- Mentor: [Joan L. Slonczewski, Ph.D.](https://www.kenyon.edu/directories/campus-directory/biography/joan-slonczewski/)
-- Description: Led a project investigating how anaerobic conditions affect the acid survival response in E. coli
-- Outputs: [Honors thesis](https://digital.kenyon.edu/honorstheses/76/), [poster presentation](http://danielriggins.com/cv/prop/Riggins_ASM_Poster_3.pptx), [two](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0010132) [papers](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0056796) with first authorship on the second one, and research award from my undergraduate college
+```{r}
+CV %<>% print_section('projects')
+```
 
 Journal Publications {data-icon=book}
 --------------------------------------------------------------------------------
@@ -224,9 +123,10 @@ Journal Publications {data-icon=book}
 CV %<>% print_section('pubs')
 ```
 
-Presentations {data-icon=chalkboard-teacher}
+Selected Presentations {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
+<!--
 ### Indiana Ave Community Survey ([slides](https://docs.google.com/presentation/d/1FNQX2FLx0By-fFqEsdiiuGdxNx1620Px5jWqWwBzifc/edit?usp=sharing))
 
 Senior Presentation for Pediatrics Residency at Indiana University School of Medicine
@@ -236,6 +136,8 @@ Indianapolis, IN
 2021
 
 - Riggins, D.P.
+
+
 
 ### Obesity in Urban Youth: Connection to Enuresis ([poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx))
 
@@ -247,6 +149,8 @@ Baltimore, MD
 
 - Gross, M., Riggins, D.P., Sims, C., Foreman, O., Rieder, J.
 
+-->
+
 ### The relationship between incarceration and retention in opioid maintenance treatment ([slides](http://danielriggins.com/cv/prop/correctional_health_conference_slides.pptx))
 
 9th Academic and Health Policy Conference on Correctional Health
@@ -256,6 +160,8 @@ Baltimore, MD
 2016
 
 - Riggins, D.P., Fox, A.D.
+
+<!--
 
 ### The relationship between incarceration and opioid addiction treatment ([slides](http://danielriggins.com/cv/prop/bupe_riggins_150818.pptx))
 
@@ -267,6 +173,8 @@ New York City, NY
 
 - Riggins, D.P., Fox, A.D.
 
+-->
+
 ### pH Regulation Differs Under Low Oxygen Conditions in E. Coli ([poster](http://danielriggins.com/cv/prop/Riggins_ASM_Poster_3.pptx))
 
 112th General Meeting of the American Society for Microbiology
@@ -277,6 +185,8 @@ San Francisco, CA
 
 - Riggins, D.P., Martinez, K, Slonczewski, J.L.
 
+
+<!--
 ### The Effects of Anoxic Conditions on the Extreme-Acid Survival of Escherichia coli (slides)
 
 Kenyon College Biology Honors Student Presentations
@@ -286,9 +196,10 @@ Gambier, OH
 2012
 
 - Riggins, Slonczewski, J.L.
+-->
 
 
-Extracurriculars {data-icon=hands-helping}
+Selected Extracurriculars {data-icon=hands-helping}
 --------------------------------------------------------------------------------
 
 ### Volunteer
@@ -299,8 +210,10 @@ Indianapolis, IN
 
 2021 - 2020
 
-- Mentored Youth Leadership Fellows on an advocacy Project regarding housing/homelessness
+- Chaperoned systems-involved youth on a college visit 
+- Mentored youth Leadership Fellows on an advocacy project regarding housing/homelessness
 
+<!--
 ### Wellness Chair
 
 IUSM Pediatrics Resident Council
@@ -311,6 +224,8 @@ Indianapolis, IN
 
 - Coordinated improvements to resident workrooms like couches, lamps, mini-fridge, etc		
 - Coordinated wellness sessions during noon conference such as time with dogs on the front lawn and a curriculum on spiritual care in medicine
+-->
+
 
 ### Board Member
 
@@ -322,6 +237,8 @@ Bronx, NY
 
 - Coordinated lectures delivered by invited speakers on the following topics: healthcare for refugees, ethics of lethal injection, correctional health, and social implications of antimicrobial resistance
 
+
+<!--
 ### Clinical Volunteer
 
 Einstein Community Health Outreach Clinic
@@ -345,6 +262,8 @@ Bronx, NY
 - Acted as board member for 2015-2016 academic year, coordinating training and scheduling for program volunteers
 - Personally provided 16 hours of supportive human touch for neonates in the Montefiore neonatal intensive care unit
 
+-->
+
 ### Board Member
 
 Health Education Outreach Program
@@ -357,6 +276,8 @@ Bethesda, MD
 - As board member, helped with recruiting, training, and development of [organization web site](https://heopdmv.wordpress.com/about/)	
 - As head teacher, coordinated scheduling, [wrote/edited content](http://danielriggins.com/cv/img/menshealth.pdf), and assigned responsibilities for a group of 5 teachers
 
+
+<!--
 ### Educator and Gardener
 
 Bronx, Obesity, Diabetes, and You (BODY)
@@ -390,6 +311,7 @@ Washington, DC
 
 - Picked up dogs from area shelters every Saturday morning and drove them to a meeting spot in Rock Creek National Park for a three-mile run	
 - Sustained exercise helped the dogs with general health as well as temperament during subsequent adoption events	
+-->
 
 Coding Courses {data-icon=laptop}
 ---------------------------------------------------------------------------------
@@ -431,6 +353,7 @@ N/A
 
   - Introduction to SQL
 
+<!--
 Personal Interests {data-icon=bicycle}
 ---------------------------------------------------------------------------------
 
@@ -473,5 +396,4 @@ Especially projects in the R language
 N/A
 
 N/A
-
-
+-->
