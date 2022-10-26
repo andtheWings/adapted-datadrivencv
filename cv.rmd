@@ -1,5 +1,5 @@
 ---
-title: "Daniel P Hall Riggins, MD's CV"
+title: "Daniel P Hall Riggins, MD"
 author: Daniel P. Hall Riggins, MD
 date: "`r Sys.Date()`"
 params:
@@ -126,77 +126,9 @@ CV %<>% print_section('pubs')
 Selected Presentations {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
-<!--
-### Indiana Ave Community Survey ([slides](https://docs.google.com/presentation/d/1FNQX2FLx0By-fFqEsdiiuGdxNx1620Px5jWqWwBzifc/edit?usp=sharing))
-
-Senior Presentation for Pediatrics Residency at Indiana University School of Medicine
-
-Indianapolis, IN
-
-2021
-
-- Riggins, D.P.
-
-
-
-### Obesity in Urban Youth: Connection to Enuresis ([poster](http://danielriggins.com/cv/prop/PAS%20poster%20enuresis%204-18-2019%20final.pptx))
-
-Pediatric Academic Societies Meeting
-
-Baltimore, MD
-
-2019
-
-- Gross, M., Riggins, D.P., Sims, C., Foreman, O., Rieder, J.
-
--->
-
-### The relationship between incarceration and retention in opioid maintenance treatment ([slides](http://danielriggins.com/cv/prop/correctional_health_conference_slides.pptx))
-
-9th Academic and Health Policy Conference on Correctional Health
-
-Baltimore, MD
-
-2016
-
-- Riggins, D.P., Fox, A.D.
-
-<!--
-
-### The relationship between incarceration and opioid addiction treatment ([slides](http://danielriggins.com/cv/prop/bupe_riggins_150818.pptx))
-
-New York Academy of Medicine's Medical Student Forum
-
-New York City, NY
-
-2015
-
-- Riggins, D.P., Fox, A.D.
-
--->
-
-### pH Regulation Differs Under Low Oxygen Conditions in E. Coli ([poster](http://danielriggins.com/cv/prop/Riggins_ASM_Poster_3.pptx))
-
-112th General Meeting of the American Society for Microbiology
-
-San Francisco, CA
-
-2012
-
-- Riggins, D.P., Martinez, K, Slonczewski, J.L.
-
-
-<!--
-### The Effects of Anoxic Conditions on the Extreme-Acid Survival of Escherichia coli (slides)
-
-Kenyon College Biology Honors Student Presentations
-
-Gambier, OH
-
-2012
-
-- Riggins, Slonczewski, J.L.
--->
+```{r}
+CV %<>% print_section('presentations')
+```
 
 
 Selected Extracurriculars {data-icon=hands-helping}
@@ -313,47 +245,47 @@ Washington, DC
 - Sustained exercise helped the dogs with general health as well as temperament during subsequent adoption events	
 -->
 
-Coding Courses {data-icon=laptop}
----------------------------------------------------------------------------------
+<!-- Coding Courses {data-icon=laptop} -->
+<!-- --------------------------------------------------------------------------------- -->
 
-### Coursera:
+<!-- ### Coursera: -->
 
-Python for Everybody Specialization:
+<!-- Python for Everybody Specialization: -->
 
-N/A
+<!-- N/A -->
 
-N/A
+<!-- N/A -->
 
-- Programming for Everybody
-- Python Data Structures
-- Using Python to Access Web Data
-- Using Databases with Python
+<!-- - Programming for Everybody -->
+<!-- - Python Data Structures -->
+<!-- - Using Python to Access Web Data -->
+<!-- - Using Databases with Python -->
 
-### DataCamp:
+<!-- ### DataCamp: -->
 
-R:
+<!-- R: -->
 
-N/A
+<!-- N/A -->
 
-N/A
-  
-- Introduction to R
-- Intermediate R
-- Introduction to the Tidyverse
-- Data Manipulation with dplyr
-- Interactive Maps with leaflet in R
+<!-- N/A -->
 
-**Python:**
+<!-- - Introduction to R -->
+<!-- - Intermediate R -->
+<!-- - Introduction to the Tidyverse -->
+<!-- - Data Manipulation with dplyr -->
+<!-- - Interactive Maps with leaflet in R -->
 
-- Introduction to Python
-- Intermediate Python
-- Streamlined Data Ingestion with pandas
+<!-- **Python:** -->
 
-**SQL:**
+<!-- - Introduction to Python -->
+<!-- - Intermediate Python -->
+<!-- - Streamlined Data Ingestion with pandas -->
 
-  - Introduction to SQL
+<!-- **SQL:** -->
 
-<!--
+<!--   - Introduction to SQL -->
+
+
 Personal Interests {data-icon=bicycle}
 ---------------------------------------------------------------------------------
 
@@ -396,4 +328,3 @@ Especially projects in the R language
 N/A
 
 N/A
--->

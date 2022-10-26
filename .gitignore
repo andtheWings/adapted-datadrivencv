@@ -14,3 +14,5 @@ cv.pdf
 *.pdf
 
 data/entries_deprec.csv
+
+data/.~lock.entries.csv#
