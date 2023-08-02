@@ -1,6 +1,6 @@
 ---
-title: "Daniel P Hall Riggins, MD"
-author: Daniel P. Hall Riggins, MD
+title: "Daniel P Hall Riggins, MD, MPH"
+author: Daniel P. Hall Riggins, MD, MPH
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -85,22 +85,39 @@ Last updated on `r Sys.Date()`
 Main
 ================================================================================
 
-Daniel P. Hall Riggins, MD {#title}
+Daniel P. Hall Riggins, MD, MPH {#title}
 ---------------------------------------
 
-Training {data-icon=graduation-cap}
+Employment {data-icon=briefcase #employment}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('employment')
+```
+
+<!-- Designed, cloned, and expressed several markerless insertion/deletion mutations in Staphylococcus -->
+<!-- Generated large pool of Staphylococcus mutants via transposon mutagenesis -->
+<!-- FDA Address: 10903 New Hampshire Ave, Silver Spring, MD 20993 -->
+<!-- Scott Stibitz, Principal Investigator of Laboratory of Mucosal Pathogens & Cellular Immunology, 240-402-7401, Earle.Stibitz@fda.hhs.gov -->
+<!-- Term: July 11th, 2012 - June 27th, 2014 -->
+
+Education {data-icon=graduation-cap}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('education')
 ```
 
-Other Employment {data-icon=briefcase #employment}
---------------------------------------------------------------------------------
+<!-- Prev Med Address: 1950 W. Polk St, Chicago, IL 60612 -->
 
-```{r}
-CV %<>% print_section('employment')
-```
+<!-- Prev Med Duties: -->
+<!-- - Project Work: 60% FTE on public health projects as outlined in my CV -->
+<!-- - Educational: 20% FTE on classwork for a master of public health degree -->
+<!-- - Clinical: 20% FTE on clinical work in pediatric primary care, preventive services for migrant children, and care coordination for people experiencing homelessness -->
+
+<!-- Pediatric Residency Address: 1130 W Michigan Street, Fesler Hall 320, Indianapolis, IN 46202 -->
+<!-- Jerry Rushton, jrushton@iu.edu, 317-944-4034 -->
+<!-- Pediatric Residency Duties: Clinical practice to cover the breadth of general pediatrics training including primary care, emergency department, general hospital ward, specialty care services, and intensive care units. -->
 
 Honors and Awards {data-icon=award}
 --------------------------------------------------------------------------------
@@ -109,18 +126,19 @@ Honors and Awards {data-icon=award}
 CV %<>% print_section('awards')
 ```
 
-Selected Projects {data-icon=search}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('projects')
-```
-
 Journal Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('pubs')
+```
+
+
+Selected Projects {data-icon=search}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('projects')
 ```
 
 Selected Presentations {data-icon=chalkboard-teacher}
