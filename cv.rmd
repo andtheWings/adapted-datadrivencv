@@ -152,6 +152,12 @@ CV %<>% print_section('presentations')
 Selected Extracurriculars {data-icon=hands-helping}
 --------------------------------------------------------------------------------
 
+```{r}
+CV %<>% print_section('extracurriculars')
+```
+
+<!--
+
 ### Volunteer
 
 [VOICES](http://voicescorp.org/)
@@ -161,9 +167,9 @@ Indianapolis, IN
 2021 - 2020
 
 - Chaperoned systems-involved youth on a college visit 
-- Mentored youth Leadership Fellows on an advocacy project regarding housing/homelessness
+- Mentored youth leadership fellows on an advocacy project regarding housing/homelessness
 
-<!--
+
 ### Wellness Chair
 
 IUSM Pediatrics Resident Council
@@ -174,7 +180,7 @@ Indianapolis, IN
 
 - Coordinated improvements to resident workrooms like couches, lamps, mini-fridge, etc		
 - Coordinated wellness sessions during noon conference such as time with dogs on the front lawn and a curriculum on spiritual care in medicine
--->
+
 
 
 ### Board Member
@@ -188,7 +194,6 @@ Bronx, NY
 - Coordinated lectures delivered by invited speakers on the following topics: healthcare for refugees, ethics of lethal injection, correctional health, and social implications of antimicrobial resistance
 
 
-<!--
 ### Clinical Volunteer
 
 Einstein Community Health Outreach Clinic
@@ -197,9 +202,9 @@ Bronx, NY
 
 2018 - 2014
 
-- Completed 15 sessions at Einstein's student-run free clinic for uninsured/undocumented patients
+- Completed 15 clinical sessions at Einstein's student-run free clinic for uninsured/undocumented patients
 - During clinical years (3-4), provided primary care encounters for patients, ran back-of-house operations like laboratory/consult follow-up, and coordinated clinical flow
-- During pre-clinical years (1-2), performed chart review for information on quality measures as well as initial patient intake and triage	
+- During pre-clinical years (1-2), performed chart review for information on quality measures as well as initial patient intake and triage
 
 ### Board Member
 
@@ -212,7 +217,6 @@ Bronx, NY
 - Acted as board member for 2015-2016 academic year, coordinating training and scheduling for program volunteers
 - Personally provided 16 hours of supportive human touch for neonates in the Montefiore neonatal intensive care unit
 
--->
 
 ### Board Member
 
@@ -222,12 +226,12 @@ Bethesda, MD
 
 2014 - 2012
 
-- Personally taught over 10 health lessons at homeless shelters in the Maryland suburbs of Washington D.C.
+- Personally taught 10 health lessons at homeless shelters in the Maryland suburbs of Washington D.C.
 - As board member, helped with recruiting, training, and development of [organization web site](https://heopdmv.wordpress.com/about/)	
 - As head teacher, coordinated scheduling, [wrote/edited content](http://danielriggins.com/cv/img/menshealth.pdf), and assigned responsibilities for a group of 5 teachers
 
 
-<!--
+
 ### Educator and Gardener
 
 Bronx, Obesity, Diabetes, and You (BODY)
