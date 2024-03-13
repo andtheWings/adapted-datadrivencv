@@ -1,8 +1,8 @@
 Id of contact section,Icon used from font-awesome 4 to label this contact section,The actual value written for the contact entry
 loc,icon,contact
-email,envelope,daniel.riggins@proton.me
-website,link,[danielriggins.com](http://danielriggins.com)
-twitter,twitter,[Twitter](https://twitter.com/DanRiggins)
+email,envelope,[Email](daniel.riggins@protonmail.com)
+website,link,[Landing Page](http://danielriggins.com)
+mastodon,mastodon,[Mastodon](https://writing.exchange/@danriggins)
 orcid,university,[Orcid](https://orcid.org/0000-0002-6240-6212)
 github,github,[Github](https://github.com/andtheWings/)
 linkedin,linkedin,[LinkedIn](https://linkedin.com/in/daniel-riggins-053372183/)

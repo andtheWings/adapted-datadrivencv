@@ -7,7 +7,7 @@ params:
     value: false
 output:
   pagedown::html_resume:
-    css: ['dd_cv.css', 'resume']
+    css: ['resume', 'dd_cv.css']
     self_contained: true
 ---
 
@@ -88,7 +88,7 @@ Main
 Daniel P. Hall Riggins, MD, MPH {#title}
 ---------------------------------------
 
-Board certified in pediatrics and board-eligible in preventive medicine
+<p id="boardCert">Board certified in pediatrics and board-eligible in preventive medicine</p>
 
 Employment {data-icon=briefcase #employment}
 --------------------------------------------------------------------------------
@@ -128,11 +128,17 @@ Honors and Awards {data-icon=award}
 CV %<>% print_section('awards')
 ```
 
-Journal Publications {data-icon=book}
+Journal Publications {data-icon=book-open}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('pubs')
+```
+
+Manuscripts {data-icon=scroll}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('manuscripts')
 ```
 
 

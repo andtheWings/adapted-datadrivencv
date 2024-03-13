@@ -8,12 +8,34 @@ body {
   color: #444;
 }
 
+.email {
+    word-wrap: break-word;
+}
+
+.aside ul {
+    padding-left: 0 !important;
+}
+
+#boardCert {
+    font-size: 0.9rem;
+}
+
+[data-id="contact"] ul {
+    margin-top: 10px;
+}
+
 /* Give headers playfair font */
-h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
   color: #000;
+}
+
+[data-id="title"] h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #A71212;
+  font-size: 1.6rem;
 }
 
 /* When in PDF export mode make sure superscripts are nice and small and italic */
@@ -36,7 +58,7 @@ sup {
 /* Customize some of the sizing variables */
 :root {
   --sidebar-width: 12rem; /* Shrink sidebar width  */
-  --sidebar-background-color: #f7fbff; /* Make sidebar blue */
+  --sidebar-background-color: #ECF4FD; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
   --decorator-border: 2px solid #bdd7e7; /* Make timeline a blue as well*/
