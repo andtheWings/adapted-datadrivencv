@@ -13,7 +13,7 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  results='asis', 
+  results = 'asis', 
   echo = FALSE
 )
 
@@ -110,16 +110,24 @@ Education {data-icon=graduation-cap}
 CV %<>% print_section('education')
 ```
 
-<!-- Prev Med Address: 1950 W. Polk St, Chicago, IL 60612 -->
+<!-- Northwestern First Day of Classes: June 22, 2021 -->
+<!-- Northwestern Last Day of Classes: June 9th, 2023 -->
+<!-- Northwestern Graduation Date: June 12, 2023 (estimate) -->
 
+<!-- Prev Med Address: 1950 W. Polk St, Chicago, IL 60612 -->
 <!-- Prev Med Duties: -->
 <!-- - Project Work: 60% FTE on public health projects as outlined in my CV -->
 <!-- - Educational: 20% FTE on classwork for a master of public health degree -->
 <!-- - Clinical: 20% FTE on clinical work in pediatric primary care, preventive services for migrant children, and care coordination for people experiencing homelessness -->
 
+
 <!-- Pediatric Residency Address: 1130 W Michigan Street, Fesler Hall 320, Indianapolis, IN 46202 -->
 <!-- Jerry Rushton, jrushton@iu.edu, 317-944-4034 -->
 <!-- Pediatric Residency Duties: Clinical practice to cover the breadth of general pediatrics training including primary care, emergency department, general hospital ward, specialty care services, and intensive care units. -->
+
+<!-- Einstein First Day of Classes: 08/14/2014  -->
+<!-- Einstein Last Day of Classes: 05/16/2018 -->
+<!-- Einstein Graduation: 05/24/2018 -->
 
 Honors and Awards {data-icon=award}
 --------------------------------------------------------------------------------
@@ -142,13 +150,6 @@ CV %<>% print_section('manuscripts')
 ```
 
 
-Selected Projects {data-icon=search}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('projects')
-```
-
 Selected Presentations {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
@@ -156,6 +157,18 @@ Selected Presentations {data-icon=chalkboard-teacher}
 CV %<>% print_section('presentations')
 ```
 
+Upcoming Presentations {data-icon=file-powerpoint}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('upcoming_presentations')
+```
+
+Selected Projects {data-icon=search}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('projects')
+```
 
 Selected Extracurriculars {data-icon=hands-helping}
 --------------------------------------------------------------------------------
