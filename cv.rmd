@@ -88,7 +88,7 @@ Main
 Daniel P. Hall Riggins, MD, MPH {#title}
 ---------------------------------------
 
-<p id="boardCert">Board certified in pediatrics and board-eligible in preventive medicine</p>
+<p id="boardCert">Board-Certified General Pediatrician</p>
 
 Employment {data-icon=briefcase #employment}
 --------------------------------------------------------------------------------
@@ -128,6 +128,12 @@ CV %<>% print_section('education')
 <!-- Einstein First Day of Classes: 08/14/2014  -->
 <!-- Einstein Last Day of Classes: 05/16/2018 -->
 <!-- Einstein Graduation: 05/24/2018 -->
+
+Certifications {data-icon=certificate}
+--------------------------------------------------------------------------------
+```{r}
+CV %<>% print_section('certificates')
+```
 
 Honors and Awards {data-icon=award}
 --------------------------------------------------------------------------------
